@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Wild Journal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="./js/script.js" defer></script>
+  <!--defer needs to be here! Don't erase-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans:wght@400;700&display=swap" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+
+<body id="pageTop">
+  <section class="header-container">
+    <img src="./assets/hero.jpg" alt="Abandoned boat at dusk" class="main-img" onclick="closeNav()" />
+    <nav>
+      <img src="./assets/LogoWhite.png" class="header-logo" alt="The Wild Journal logo" />
+      <button class="menuBtn" onclick="openNav()">
+        <div class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </nav>
+    <h1 class="project-title">The Wild Journal</h1>
+    <p class="main-text">
+      Fifteen students from different professional backgrounds embarked upon a
+      new adventure to become web developers in five months. Join us on our
+      journey!
+    </p>
+
+
+    <!-- Overlay menu -->
+    <div class="menuoverlay" id="menuNav" onclick="closeNav()">
+      <!-- Overlay close button -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+      <!-- Overlay link list -->
+      <div class="menuoverlay-content">
+        <a href="journal.html#journal">The Journal</a>
+        <a href="#ask">Ask a Wilder</a>
+        <a href="#theTeam">Meet the Team</a>
+        <a href="#contactUs">Contact Us</a>
+      </div>
+    </div>
+    <!-- Overlay menu -->
+  </section>
+
+  <main onclick="closeNav()">
+    <!-- Comment: I wrapped all articles into an "upper" article tag to use a semantic tag and defined the classes so that we can use flex for the layout in desktop version -->
+    <article class="art-container">
+      <h3 id="journal">Explore</h3>
+      <article class="article">
+        <div class="gallery">
+          <div id="galpic" class="gallery-picture">
+            <ul>
+              <li><a href="#img1"><img src="assets/coding-group.jpg"
+                    alt="A group of students sitting together at a table and coding"></a></li>
+            </ul>
+            <a href="#_1" class="lightbox trans" id="img1"><img src="assets/coding-group.jpg"></a>
+          </div>
+        </div>
+        <div class="art-text">
+          <p class="date">12/09/2022</p>
+          <h2>The First Day At WildCodeSchool!</h2>
+          <a href="journal.html#first-art">
+            <p class="paragraph">
+              The September 12th we started our odyssey (just like Homer)
+              towards adventure. In this particular case, we are heading to our
+              destination: knowledge. Becoming a web developer is an exciting
+              journey
+            </p>
+          </a>
+        </div>
+      </article>
+      <article class="article">
+        <div class="gallery">
+          <div class="gallery-picture">
+            <ul>
+              <li><a href="#img2"><img src="assets/workshop.jpg"
+                    alt="a monitor showing a code editor in front, woman wearing a mask and black framed glasses in the back sitting at a desk while doing the peace sign with both her hands"></a>
+              </li>
+            </ul>
+            <a href="#_2" class="lightbox trans" id="img2"><img src="assets/workshop.jpg"></a>
+          </div>
+        </div>
+        <div class="art-text">
+          <p class="date">23/09/2022</p>
+          <h2>The Workshop Flow</h2>
+          <a href="journal.html#second-art">
+            <p class="paragraph">
+              Through error and tries (many of them), we have succussed one
+              workshop after another. GIT, HTML, CSS, lastly: JS. No task is too
+              little for us, the hungry learners of this school! Mastering
+              variables, classes and id’s, functions and the fearsome media
+            </p>
+          </a>
+        </div>
+      </article>
+      <article class="article">
+        <div class="gallery">
+          <div class="gallery-picture">
+            <ul>
+              <li><a href="#img3"><img src="assets/grumpycat.jpg"
+                    alt="A sleepy cat lying on a laptop with a code editor opened"></a>
+              </li>
+            </ul>
+            <a href="#_3" class="lightbox trans" id="img3"><img src="assets/grumpycat.jpg"></a>
+          </div>
+        </div>
+        <div class="art-text">
+          <p class="date">30/09/2022</p>
+          <h2>Grumpy Cat Strikes Again!</h2>
+          <a href="journal.html#third-art">
+            <p class="paragraph">
+              The routine in WCS, includes a quizz every week. The highlight of
+              this week wasn't the surprising win of our new student Elif, but
+              the emergence of a new "masked hero" called grumpy cat. Who is he
+              you might ask? We don't know either!
+            </p>
+          </a>
+        </div>
+      </article>
+      <a href="journal.html"><button class="button-art">Dive into the journal</button></a>
+    </article>
+
+
+    <section class="qotd-container" id="ask">
+      <div class="question-of-the-day">
+        <div class="qotd-text">
+          <p class="qotdp">Ask a Wilder</p>
+          <h2>What’s the thing you enjoy most about coding so far?</h2>
+          <p> “That feeling - whenever you have a problem in your code and you
+            “console.log” your way to the solution - sometimes on your own,
+            sometimes with help. It can be frustrating during the process but
+            the feeling afterwards is so rewarding.”
+            <span class="qotde">Elif, Germany</span>
+          </p>
+        </div>
+      </div>
+      <p class="qotdp2">
+        Do you have a question for our wilders? Let us know!
+      </p>
+      <button class="buttonq"><a class=aref href="#contactUs">Ask a Wilder</a></button>
+
+    </section>
+
+    <section id="theTeam" class="team">
+      <h3>Meet the team</h3>
+      <div class="team-container">
+        <div class="person">
+          <div class="person-image">
+            <img src="assets/Diego.png" alt="" />
+          </div>
+          <div class="person-text">
+            <p class="person-name">Diogo, Portugal</p>
+
+          </div>
+        </div>
+        <div class="person">
+          <div class="person-image">
+            <img src="assets/elif.JPG" alt="" />
+          </div>
+          <div class="person-text">
+            <p class="person-name">Elif, Germany</p>
+          </div>
+        </div>
+        <div class="person">
+          <div class="person-image">
+            <img src="assets/Iryna.png" alt="" />
+          </div>
+          <div class="person-text">
+            <p class="person-name">Iryna, Ukraine</p>
+          </div>
+        </div>
+        <div class="person">
+          <div class="person-image">
+            <img src="assets/IsaSchl.jpg" alt="" />
+          </div>
+          <div class="person-text">
+            <p class="person-name">Isamu, Germany</p>
+
+          </div>
+        </div>
+        <div class="person">
+          <div class="person-image">
+            <img src="assets/Joao.jpg" alt="" />
+          </div>
+          <div class="person-text">
+            <p class="person-name">Joao, Portugal</p>
+
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <div class="contact" id="contactUs">
+      <h3>Contact us</h3>
+      <p>
+        Have a funny story about Wilders or just feel like you want to send us
+        a message or a question? Let’s get in touch!
+      </p>
+      <form id="form" appearance="outline">
+        <input class="input1" id="text" type="text" placeholder="Example@wildcodeschool.com" />
+        <br />
+        <textarea class="input2" type="text" id="Message" placeholder="Your Message"></textarea>
+        <br />
+        <button disabled class="buttonc" data-modal-target="#modal">
+          Send Message
+        </button>
+
+        <div class="modal" id="modal">
+          <div class="modal-header">
+            <div class="title">Thank you! &#128522</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            Thank you for the message! Your question/comment will be reviewed and you will be contacted soon!
+          </div>
+        </div>
+        <div id="overlay"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div>🍂The Wild Journal: 09/22 Edition</div>
+    <div>
+      <a class="active" href="https://www.wildcodeschool.com/en-GB"><img src="assets/WCS.png" height="50"
+          width="60"></a>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,1033 @@
+/*Common variables to use during the CSS file*/
+:root {
+  --colorOrange: #db6c2f;
+  --colorBlack: #323232;
+  --colorPurple: #554b84;
+  --colorBeige: #f3e9dc;
+  --colorGray: #f5f5f5;
+  --fontNoto: "Noto Sans", sans-serif;
+  --fontMontserrat: "Montserrat", sans-serif;
+  /*--colorletters0: 0%;*/
+}
+
+/*global value for border-boxing the website*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  margin: 0 auto;
+}
+
+/*!!!!!!!!FONTS STYLING!!!!!!!*/
+
+.date:hover {
+  color: #7d82ac;
+  transition-duration: 0.3s;
+}
+
+.art-text h2:hover,
+.art-text p:hover {
+  color: #7d82ac;
+  transition-duration: 0.3s;
+  cursor: sw-resize;
+}
+
+.paragraph {
+  white-space: normal;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 10) 50%,
+    rgba(0, 0, 0, 0)
+  );
+  /*FIREFOX COMPATIBILITY*/
+  -mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 10) 50%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+h1 {
+  color: white;
+  font-family: var(--fontMontserrat);
+  font-weight: bold;
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  color: var(--colorBlack);
+  font-family: var(--fontMontserrat);
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  margin-bottom: 0.5rem;
+  margin-top:0.5rem;
+}
+
+h3 {
+  color: var(--colorPurple);
+  font-family: var(--fontMontserrat);
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--colorBlack);
+  /*needs to be redefined in specified classes when purple is needed*/
+  font-family: var(--fontNoto);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/*advisable text limit for UX*/
+
+/*Removes big margins
+
+article {
+  max-width: 65ch;
+}
+*/
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  min-width: 330px;
+  max-width: 1200px;
+}
+
+/* Header Container rules */
+.header-container {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+.header-container .main-img {
+  width: auto;
+  height: 500px;
+  object-fit: cover;
+  margin: 0 auto;
+  z-index: -1;
+  max-height: 1080px;
+  object-position: bottom;
+}
+
+.header-logo {
+  position: absolute;
+  top: 5%;
+  left: 6%;
+  height: clamp(3rem, 6vw, 5rem);
+}
+
+nav {
+  display: flex;
+}
+
+.project-title {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-family: var(--fontMontserrat);
+  font-weight: 700;
+  color: var(--colorBeige);
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  text-align: center;
+}
+
+.main-text {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0%);
+  color: var(--colorBeige);
+  font-size: clamp(1.3rem, 3vw, 1.5rem);
+  font-style: italic;
+  line-height: 1.75rem;
+}
+
+/* Header rules end */
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!NAV BAR AND HAMB MENU!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/* Start of dropdown styling and function */
+.menu-icon span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: var(--colorOrange);
+  border-radius: 5px;
+  margin: 0.25rem 45% 0.25rem auto;
+}
+
+/* Dropdown menu size definition */
+.menuoverlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  background-color: var(--colorGray);
+  overflow-x: hidden;
+  transition: 0.5s;
+  top: 0;
+  color: var(--colorPurple);
+}
+
+/* Dropdown menu list */
+.menuoverlay-content {
+  position: relative;
+  top: 30%;
+  /* Adjust as needed */
+  /* width: 100%; */
+  text-align: center;
+  /* color: black; */
+}
+
+.menuoverlay a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding-bottom: 1.7rem;
+  padding: auto auto;
+  display: block;
+  transition: 0.5s;
+  color: var(--colorPurple);
+  text-align: center;
+  font-family: var(--fontMontserrat);
+  font-weight: 700;
+}
+
+.menuoverlay a:hover,
+.menuoverlay a:focus {
+  transform: scale(1.3);
+  color: white;
+  transition: 0.3s;
+}
+
+/* Close button position on overlay */
+.menuoverlay .closebtn {
+  position: absolute;
+  right: 1.6rem;
+  top: 11%;
+  font-size: 2.5rem;
+}
+
+.menuBtn {
+  position: absolute;
+  border: none;
+  top: 10%;
+  right: 1.5rem;
+  cursor: pointer;
+  background: none;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!ARTICLES!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.art-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  background-color: #f3e9dc;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.date:hover {
+  color: #7d82ac;
+  transition-duration: 0.3s;
+}
+
+.art-text h2:hover,
+.art-text p:hover {
+  color: #7d82ac;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+/*Styling the articles button */
+.button-art {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #db6c2f;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  width: 12.5rem;
+  color: white;
+  line-height: 1.2rem;
+
+}
+
+.button-art:hover {
+  background-color: #554b84;
+  box-shadow: 0px 15px 20px grey;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.button-art:active {
+  transform: translateY(-1px);
+}
+
+
+
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!LIGHTBOX EFFECT!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.gallery {
+  width: 100%;
+  height: 100%;
+}
+
+.trans {
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+}
+
+.gallery-picture {
+  width: 100%;
+  height: 100%;
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2vh;
+}
+
+.gallery-picture ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-picture ul li {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  margin: 0rem;
+}
+
+.gallery-picture ul li:hover::before {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.gallery-picture ul li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  content: " ";
+  color: white;
+  opacity: 0.4;
+  text-align: center;
+  box-sizing: border-box;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+.gallery-picture ul li img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.lightbox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  position: relative;
+  top: -100%;
+  /* Transition */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+}
+
+.lightbox:target {
+  outline: none;
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 1.2s ease;
+  -moz-transition: all 1.2s ease;
+  -ms-transition: all 1.2s ease;
+  -o-transition: all 1.2s ease;
+  -webkit-transition: all 1.2s ease;
+}
+
+.lightbox:target img {
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+#galpic{
+  margin-top: 0;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!QUESTION OF THE DAY!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/*ELIFS FINAL EDIT ON QOTD*/
+.qotd-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--colorGray);
+}
+
+.qotdp {
+  color: var(--colorPurple);
+  font-weight: 700;
+}
+
+.qotdp2 {
+  font-style: italic;
+  margin: 0 1.5rem;
+}
+
+.qotde {
+  float: right;
+  font-weight: bold;
+  color: var(--colorPurple);
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+
+.buttonq {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #db6c2f;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 12.5rem;
+  color: white;
+  text-align: center;
+}
+
+.buttonq:hover {
+  background-color: #554b84;
+  box-shadow: 0px 15px 20px grey;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.buttonq:active {
+  transform: translateY(-1px);
+}
+
+.question-of-the-day {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.qotd-text {
+  flex: 2;
+  max-width: 600px;
+}
+
+#ask {
+  padding: 1rem;
+}
+.aref {
+  color: white;
+}
+
+/*ELIFS FINAL EDIT ON QOTD */
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!MEET THE TEAM!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/*ELIFS FINAL EDIT ON TEAM START*/
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.person {
+  margin: 0 1rem;
+  max-width: 250px;
+}
+.person-text {
+  margin-top: 1rem;
+  text-align: center;
+}
+.team {
+  margin-bottom: 2rem;
+}
+.team > h3 {
+  margin: 2rem 1.5rem;
+}
+.person-image > img {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.person-name {
+  color: #554b84;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+/*ELIFS FINAL EDIT ON TEAM END*/
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!CONTACT FORM!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.contact {
+  padding: 1rem;
+  background-color: #f5f5f5;
+}
+
+.contact > h3 {
+  font-family: var(--fontMontserrat);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  color: #554b84;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.contact > p {
+  font-family: var(--fontNoto);
+  margin-bottom: 1rem;
+  /* font-size: 1rem; */
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+#form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.5rem;
+}
+
+#form input[type="text"] {
+  background-color: white;
+  height: 2.5rem;
+  padding: 1rem;
+  border: 0;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+#form textarea[type="text"] {
+  background-color: white;
+  height: 8rem;
+  padding: 1rem;
+
+  border: 0;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.send {
+  background-color: var(--colorbackgroundButtons);
+  color: black;
+  text-shadow: 1px 1px 2px #000000;
+  font-family: var(--fontAlegreya);
+  height: 2.5rem;
+  font-size: 1rem;
+  border: 0;
+  box-shadow: 0.25rem 0.25rem 0.25rem black;
+}
+
+.buttonc {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #db6c2f;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1.5rem;
+  width: 12.5rem;
+  /* height: 3rem; */
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttonc:hover {
+  background-color: #554b84;
+  box-shadow: 0px 15px 20px grey;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.buttonc:active {
+  transform: translateY(-1px);
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-family: var(--fontAlegreya);
+  font-style: italic;
+  padding: 1.5rem;
+  background-color: #554b84;
+  color: white;
+}
+
+.fa-globe:before {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.fa-globe:hover {
+  background-color: white;
+}
+
+.link {
+  height: 1rem;
+}
+
+/*Start Test*/
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 150ms;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+  text-align: center;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 15px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  background-color: var(--colorPurple);
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: var(--fontMontserrat);
+  text-align: center;
+  color: var(--colorGray);
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  left: 5rem;
+}
+
+.modal-body {
+  padding: 10px 15px;
+  font-family: var(--fontNoto);
+}
+
+
+
+/*END TEST*/
+
+/* TABLET/DEKTOP screen */
+@media screen and (min-width: 600px) {
+  /* Isamu's edit start */
+
+  .header-container .main-img {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+  }
+
+  .header-logo {
+    margin: 0 auto;
+    left: 45%;
+    transform: translate(-20%);
+    /* height: 4rem; */
+  }
+
+  .project-title,
+  .main-text {
+    text-align: left;
+    padding-left: 5vw;
+  }
+
+  .project-title {
+    width: 100%;
+    top: 35%;
+  }
+
+  .main-text {
+    top: 45%;
+    width: 60%;
+    color: white;
+    left: 0;
+    transform: none;
+    line-height: 2.25rem;
+  }
+
+  .menuBtn {
+    display: none;
+  }
+
+  #menuNav {
+    height: auto;
+  }
+
+  .menuoverlay {
+    display: contents !important;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .menuoverlay > .menuoverlay-content {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 0 3%;
+    top: 17%;
+    justify-content: space-evenly;
+    margin-top: 1.5rem;
+  }
+
+  /* OVERLAY TEST */
+  .menuoverlay a {
+    font-size: 1.3rem;
+    display: inline;
+    color: var(--colorOrange);
+    text-align: center;
+    font-family: var(--fontMontserrat);
+    transition: none;
+    padding-bottom: 0;
+    font-weight: 700;
+  }
+
+  a.closebtn {
+    display: none;
+  }
+
+  /* Isamu's edit end */
+
+  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  /*!!!!!!!!DESKTOP ALIGNEMENT!!!!!!!*/
+  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+  .art-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .article .gallery {
+    order: 1;
+    width: 100%;
+    height: 25%;
+  }
+
+  .gallery-picture {
+    margin-top: 0;
+  }
+
+  .paragraph {
+    max-width: 65ch;
+    margin-right: 2rem;
+    margin-left: 1rem;
+  }
+
+  .art-text h2,
+  .art-text .date {
+    margin-right: 2rem;
+    margin-left: 1rem;
+  }
+
+  #journal {
+    margin-right: 2rem;
+    margin-left: 1rem;
+  }
+
+
+  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  /*!!!!!!!!CONTACT MOBILE!!!!!!!*/
+  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+  #form {
+    display: flex;
+
+    align-items: center;
+    padding: 1rem;
+    margin-top: 0;
+  }
+
+  .contact > h3 {
+    font-family: var(--fontMontserrat);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: #554b84;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    text-align: center;
+  }
+
+  .contact > p {
+    font-family: var(--fontNoto);
+    /* font-size: 1rem; */
+    margin-right: 10rem;
+    margin-left: 10rem;
+    text-align: center;
+  }
+
+  #form input[type="text"] {
+    background-color: white;
+    padding: 1rem;
+    width: 30rem;
+    border: 0;
+  }
+
+  #form textarea[id="Message"] {
+    height: 8rem;
+    width: 30rem;
+  }
+
+  #form input[type="submit"] {
+    width: 5rem;
+    font-size: 1.25rem;
+  }
+
+  .buttonc {
+    margin: 0;
+  }
+
+  .question-of-the-day {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    /* margin-top: 1rem;
+    margin-bottom: 1rem; */
+    background-color: var(--colorGray);
+    align-items: center;
+    /* width: 100%;
+    padding: 0rem; */
+    height: 20rem;
+  }
+
+  .qotdp2 {
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .qotd-text {
+    display: flex;
+    flex-direction: column;
+    /* width: 45rem; */
+    /* margin: 2rem 2rem; */
+    /* margin-top: 2rem;
+    margin-bottom: 2rem; */
+  }
+
+  .buttonq {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
+  .qotde {
+    font-weight: bold;
+    color: var(--colorPurple);
+    margin-bottom: 0rem;
+    /* margin-right: 3rem; */
+  }
+  .team > h3 {
+    margin: 2rem 3rem;
+  }
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!NEW FONTS AND BUTTONS DESKTOP!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-family: var(--fontMontserrat);
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+  }
+  h2 {
+    color: var(--colorBlack);
+    font-family: var(--fontMontserrat);
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: var(--colorBlack);
+    /*needs to be redefined in specified classes when purple is needed*/
+    font-family: var(--fontNoto);
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .buttonq {
+    font-size: 0.875rem;
+    width: 14rem;
+  }
+  
+  .button-art{
+    font-size: 0.875rem;
+    width: 14.5rem;
+  }
+
+  .buttonc {
+    font-size: 0.875rem;
+    width: 14.5rem;
+  }
+
+  .modal-header .close-button {
+    position:relative;
+    left: 9rem;
+  }
+}
+
+
+
