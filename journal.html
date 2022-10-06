@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wild Press</title>
+    <link rel="stylesheet" href="journal.css" />
+    <script src="./js/script.js" defer></script>
+    <!--defer needs to be here! Don't erase-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans:wght@400;700&display=swap" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+
+<body>
+    <!-- Start of nav/dropdown section -->
+    <nav class="navbar">
+        <img src="assets/LogoBlack.png" alt="Logo2page" id="Logo2page">
+        <div class="dropdown">
+            <div class="menu">
+                <button class="menuBtn" onclick="openNav()">
+                    <div class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+            <!-- Overlay menu -->
+            <div class="menuoverlay" id="menuNav" onclick="closeNav()">
+                <!-- Overlay close button -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                <!-- Overlay link list -->
+                <div class="menuoverlay-content">
+                    <a href="#journal">The Journal</a>
+                    <a href="index.html#ask">Ask a Wilder</a>
+                    <a href="index.html#theTeam">Meet the Team</a>
+                    <a href="index.html#contactUs">Contact Us</a>
+                </div>
+            </div>
+            <!-- Overlay menu -->
+        </div>
+        <!-- <hr class="top-divider"> -->
+    </nav>
+    <!-- End of nav/dropdown section -->
+
+    <main onclick="closeNav()">
+        <article class="art-container">
+            <article class="article1st">
+                <div class="art-image1starticle">
+                    <img id="journal" src="assets/coding-group.jpg"
+                        alt="A group of students sitting together at a table and coding" />
+                </div>
+                <div class="art-text1st">
+                    <p class="date1starticle">12/09/2022</p>
+                    <p id="first-art" class="date2article">12/09/2022</p>
+                    <h2>The First Day At WildCodeSchool!</h2>
+                    <p>
+                        The September 12th we started our odyssey (just like Homer)
+                        towards adventure. In this particular case, we are heading to our
+                        destination: knowledge. Becoming a web developer is an exciting journey,
+                        where everyday is marked with pride. Indeed, we are not the same as the ones
+                        that started three weeks ago (yes, already that long). A self-evaluation is the
+                        key to uphold our accumulated knowledge, that grows exponential to our enthusiasm.
+                        Onwards, we go!
+
+                    </p>
+                </div>
+            </article>
+        </article>
+        <article class="restofarticles">
+            <article class="article">
+                <div class="art-image">
+                    <img id="second-art" src="assets/workshop.jpg"
+                        alt="a monitor showing a code editor in front, woman wearing a mask and black framed glasses in the back sitting at a desk while doing the peace sign with both her hands" />
+                </div>
+                <div class="art-text">
+                    <p class="date">23/09/2022</p>
+                    <h2>The Workshop Flow</h2>
+                    <p>
+                        Through error and tries (many of them), we have succussed one
+                        workshop after another. GIT, HTML, CSS, lastly: JS. No task is too
+                        little for us, the hungry learners of this school! Mastering variables,
+                        classes and id’s, functions and the fearsome media Queries… Although our
+                        last workshop was focused on job finding, as none of this learning process
+                        matters if we can’t find a paid job!
+                    </p>
+                </div>
+            </article>
+            <article class="article">
+                <div class="art-image">
+                    <img id="third-art" src="assets/grumpycat.jpg"
+                        alt="A sleepy cat lying on a laptop with a code editor opened" />
+                </div>
+                <div class="art-text">
+                    <p class="date">30/09/2022</p>
+                    <h2>Grumpy Cat Strikes Again!</h2>
+                    <p>
+                        The routine in WCS, includes a quizz every week. The highlight of
+                        this week wasn't the surprising win of our new student Elif, but
+                        the emergence of a new "masked hero" called grumpy cat. Who is he
+                        you might ask? We don't know either!
+                    </p>
+                </div>
+            </article>
+            <article class="article">
+                <div class="art-image">
+                    <img src="assets/ORIG/codemonitor.jpg" alt="code monitor" />
+                </div>
+                <div class="art-text">
+                    <p class="date">05/10/2022</p>
+                    <h2>The Race Of Kahoot</h2>
+                    <p>
+                        The work week culminates in a quiz show with all students, on the Kahoot platform.
+                        The instructor, David, details the questions with content that was discussed in the
+                        past days prior to the “race” (as everyone likes to call it). The podium changes
+                        little as some students have been as consistent as the same top three spots!
+                        But overall, everyone is improving their results, which can only be considered
+                        as a success.
+                    </p>
+                </div>
+            </article>
+            <article class="article">
+                <div class="art-image">
+                    <img src="assets/happycode.jpg" alt="a guy with the code image" />
+                </div>
+                <div class="art-text">
+                    <p class="date">07/10/2022</p>
+                    <h2>Coding Is Life</h2>
+                    <p>
+                        What is coding? The answer to these questions is still being answered since the
+                        beginning of the course, something that goes far beyond the “Hello world” program!
+                        The general intent regarding individual objects is more related to “How to code” as
+                        for all students coding is, above all, a life changing purpose.
+                    </p>
+                </div>
+            </article>
+            <article class="article">
+                <div class="art-image">
+                    <img src="assets/coffeecup.png" alt="a coffee mug" />
+                </div>
+                <div class="art-text">
+                    <p class="date">07/10/2022</p>
+                    <h2>Beyond The Norm</h2>
+                    <p>
+                        The “advanced” word is a concept that perpetuates in everyone’s minds as a sort of
+                        challenge. Indeed, it is most considerable that the students efforts so far have
+                        been
+                        nothing shorter than advanced, bearing in mind most people are getting into coding
+                        for
+                        the first time. This next week is full of new challenges, including a new quest
+                        (subject) aimed for advanced JavaScript.
+                    </p>
+                </div>
+            </article>
+        </article>
+        <img src="assets/LogoBlack.png" alt="Logo2page" id="Logo">
+    </main>
+    <footer class="footer">
+        <div>🍂The Wild Journal: 09/22 Edition</div>
+        <div>
+            <a class="active" href="https://www.wildcodeschool.com/en-GB"><img src="assets/WCS.png" id="WCSlogo"
+                    height="50" width="60"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
