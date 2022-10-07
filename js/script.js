@@ -120,6 +120,3 @@ const mNav = document.querySelector("#menuNav");
 close.onscroll = (event) => {
     mNav.style.height = "0";
 }
-
-close.onscroll = (event) => {
-}
