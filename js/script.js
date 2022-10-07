@@ -2,7 +2,7 @@
 let x = window.matchMedia("screen and (min-width: 1200px)");
 x.addEventListener('change', function () {
     console.log(x);
-    applyClassOnMedia();
+    applyClassOnMedia();/index.html
 })
 let mainImg = document.getElementById("main-img");
 function applyClassOnMedia() {
@@ -43,6 +43,13 @@ function openNav() {
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
     document.getElementById("menuNav").style.height = "0";
+}
+
+const close = document.querySelector("body");
+const mNav = document.querySelector("#menuNav");
+
+close.onscroll = ()=>{
+    mNav.style.height = "0";
 }
 // MENU OVERLAY END - Isamu 
 ////////////////////////////////////////////////////////////////////
