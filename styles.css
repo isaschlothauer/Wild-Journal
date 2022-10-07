@@ -552,7 +552,7 @@ a:active {
   margin-bottom: 2rem;
 }
 .team > h3 {
-  margin: 2rem 1.5rem;
+  margin: 2rem 2.25rem;
 }
 .person-image > img {
   border-radius: 50%;
@@ -579,7 +579,7 @@ a:active {
 .contact > h3 {
   font-family: var(--fontMontserrat);
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-top: 1.5rem;
   color: #554b84;
   margin-right: 2rem;
