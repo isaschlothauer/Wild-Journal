@@ -48,7 +48,7 @@ function closeNav() {
 const close = document.querySelector("body");
 const mNav = document.querySelector("#menuNav");
 
-close.onscroll = ()=>{
+close.onscroll = (event)=>{
     mNav.style.height = "0";
 }
 // MENU OVERLAY END - Isamu 
@@ -121,9 +121,9 @@ contact1.addEventListener("input", () => {
 /*End of activation*/
 
 
-const close = document.querySelector("body");
-const mNav = document.querySelector("#menuNav");
+// const close = document.querySelector("body");
+// const mNav = document.querySelector("#menuNav");
 
-close.onscroll = (event) => {
-    mNav.style.height = "0";
-}
+// close.onscroll = (event) => {
+//     mNav.style.height = "0";
+// }
