@@ -112,3 +112,11 @@ contact1.addEventListener("input", () => {
 });
 
 /*End of activation*/
+
+
+const close = document.querySelector("body");
+const mNav = document.querySelector("#menuNav");
+
+close.onscroll = (event) => {
+    mNav.style.height = "0";
+}
